@@ -1,0 +1,115 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+/* Animations */
+
+.fade-in{
+  animation: fade-in 0.2s ease-in forwards;
+ transition:opacity 300ms ease-out
+ }
+
+.fade-out{
+ animation: fade-out 0.2s ease-in forwards;
+ transition: opacity 300ms ease-out
+}
+
+@keyframes fade-in{
+ from{
+   opacity: 0;
+ }
+ to{
+   opacity: 1;
+   visibility: visible;
+ }
+}
+
+@keyframes fade-out{
+ from{
+
+   opacity: 1;
+ }
+ to{
+   opacity: 0;
+ 
+ }
+}
+
+/* Animations  END */
+
+
+
+body{
+    margin: 0;
+    background-color: #fdfdfd;
+  }
+
+.graph{
+  width: 90%;
+  height: 600px;
+  background-color: rgb(206, 208, 214);
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+.graph-inside{
+  height: 600px;
+  min-width: 400px;
+  background-color: navy;
+  float: left;
+}
+.graph-day{
+  width: 100px;
+  float: left;
+  background-color: rgb(195, 195, 196);
+  height: 600px;
+  border-right: 1px solid black;
+  box-sizing: border-box;
+  transform: rotate(180deg);
+}
+
+.scale-day{
+  width: 100%;
+  position: relative;
+  height: 500px;
+}
+
+.section-day{
+  width: 100%;
+  cursor: pointer;
+  transform: rotate(180deg);
+}
+.level-scale{
+  width: 100%;
+  height: 500px;
+  float: left;
+  background-color: #7fa2a5e0;
+  transition: 1s;
+}
+
+.level-day{
+  width: 100%;
+  background-color: red;
+}
+
+.section-tag{
+  position: absolute;
+  height: 20px;
+  width: 100%;
+  background-color: #966a6a;
+  visibility: hidden;
+  opacity: 0;
+}
