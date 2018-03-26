@@ -72,11 +72,11 @@ body{
   float: left;
 }
 .graph-day{
-  width: 100px;
+  width: 70px;
   float: left;
-  background-color: rgb(195, 195, 196);
+  background: linear-gradient(#06070e,#545d6d);
   height: 600px;
-  border-right: 1px solid black;
+  border-right: 1px solid #777777;
   box-sizing: border-box;
   transform: rotate(180deg);
 }
@@ -113,3 +113,4 @@ body{
   visibility: hidden;
   opacity: 0;
 }
+

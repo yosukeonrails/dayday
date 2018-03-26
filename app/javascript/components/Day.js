@@ -8,8 +8,6 @@ class Day extends React.Component {
     
     constructor(props){
         super(props)
-        
-        console.log(props);
 
         this.changeHeight= this.changeHeight.bind(this);
         

@@ -14,10 +14,18 @@ class MonthController < ApplicationController
 
 
         @tracker= User.where(id: @current_user.id).first.trackers.where(id:@tracker_id).first  
-        @month = @tracker.months.where(month:@month_id, year:@year_id).first
-        @days = @month.days  
+
+        puts @tracker
+        @days = @tracker.days.where(month:@month_id, year:@year_id)
+        
+        @month_id = @month_id.to_i
+        @year_id = @year_id.to_i
+
+
         @daycount = Time.days_in_month(@month_id , @year_id)
-        @data = {"tracker" => @tracker , "month"=> @month , "days" => @days, "daycount" => @daycount }
+        puts @daycount
+
+        @data = {"tracker" => @tracker , "month"=>  @month_id , "days" => @days, "daycount" => @daycount , "year" => @year_id }
 
         render json: @data, status:201
     end

@@ -2,6 +2,7 @@ class TrackerController < ApplicationController
     before_action :current_user
     
     def show    
+        
          @tracker_id = params[:id]
          @tracker= User.where(id:@current_user.id).first.trackers.where(id:@tracker_id).first     
          
@@ -13,4 +14,8 @@ class TrackerController < ApplicationController
          @days = Tracker.where(id:@tracker_id).first.days
           if @days then @days else [] end
     end
+
+
+
+
 end
